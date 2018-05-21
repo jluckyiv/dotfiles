@@ -1,3 +1,6 @@
 set -U EDITOR nvim
-alias vim='nvim'
+
 source ~/.asdf/asdf.fish
+
+alias vim "nvim"
+alias ts "tmux new -s"
