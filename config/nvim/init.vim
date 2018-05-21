@@ -1,5 +1,6 @@
 syntax enable
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'bfontaine/Brewfile.vim'         " Syntax for Brewfile
 Plug 'c-brenn/phoenix.vim'            " Phoenix navigation (depends on projectionist)
 Plug 'christoomey/vim-tmux-navigator' " Use <c-h> between vim and tmux
 Plug 'ctrlpvim/ctrlp.vim'             " Fuzzy file finder
