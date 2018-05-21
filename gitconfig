@@ -4,6 +4,7 @@
 	email = jack.lucky.iv@gmail.com
 [alias]
 	co = checkout
+  cob = checkout -b
 	br = branch
 	ci = commit
 	st = status
@@ -11,3 +12,6 @@
 	last = log -1 HEAD
 	aa = add --all
 	cim = commit -m
+	ctags = !.git/hooks/ctags
+[init]
+	templatedir = ~/.git_template
