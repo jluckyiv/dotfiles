@@ -2,5 +2,6 @@ set -U EDITOR nvim
 
 source ~/.asdf/asdf.fish
 
-alias vim "nvim"
 alias ts "tmux new -s"
+alias vim "nvim"
+set -gx PATH $PATH /Users/jluckyiv/.local/bin
