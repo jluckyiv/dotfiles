@@ -30,6 +30,7 @@ brew "openssl"
 brew "pdfgrep"
 brew "pdftk"
 brew "poppler"
+brew "postgresql"
 brew "python2"
 brew "python3"
 brew "rcm"
@@ -55,6 +56,7 @@ cask "dash"
 cask "docker"
 cask "dotnet"
 cask "dropbox"
+cask "firefox"
 # cask "font-hack"
 # cask "font-hack-nerd-font-mono"
 # cask "font-dejavu-sans"
@@ -77,7 +79,7 @@ cask "omnipresence"
 cask "textexpander"
 cask "tripmode"
 cask "tunnelblick"
-cask "visual-studio"
+# cask "visual-studio"
 cask "visual-studio-code"
 
 mas "Amphetamine", id: 937984704
@@ -93,7 +95,7 @@ mas "Spark", id: 1176895641
 mas "Termius", id: 1176074088
 mas "The Unarchiver", id:425424353
 mas "Ulysses", id: 1225570693
-mas "Xcode", id: 497799835
+# mas "Xcode", id: 497799835
 mas "iHash", id: 763902043
 
 # ansible
