@@ -82,6 +82,7 @@ cask "tunnelblick"
 # cask "visual-studio"
 cask "visual-studio-code"
 
+mas "Agenda", id: 1287445660
 mas "Amphetamine", id: 937984704
 mas "Day One", id: 1055511498
 mas "Fantastical 2", id: 975937182
