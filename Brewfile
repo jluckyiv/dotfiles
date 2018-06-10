@@ -1,7 +1,6 @@
 cask_args appdir: "/Applications"
 
 tap "caskroom/cask"
-tap "caskroom/fonts"
 tap "linode/cli"
 tap "thoughtbot/formulae"
 tap "turforlag/cervezas"
@@ -49,7 +48,6 @@ brew "youtube-dl"
 cask "1password"
 cask "backblaze"
 cask "bartender"
-# cask "bettertouchtool"
 cask "cheatsheet"
 cask "chromedriver"
 cask "cleanmymac"
@@ -59,14 +57,6 @@ cask "docker"
 cask "dotnet"
 cask "dropbox"
 cask "firefox"
-# cask "font-hack"
-# cask "font-hack-nerd-font-mono"
-# cask "font-dejavu-sans"
-# cask "font-dejavu-sans-mono-for-powerline"
-# cask "font-source-code-pro"
-# cask "font-source-code-pro-for-powerline"
-# cask "font-consolas-for-powerline"
-# cask "font-anonymous-pro"
 cask "google-backup-and-sync"
 cask "google-chrome"
 cask "google-hangouts"
@@ -81,7 +71,6 @@ cask "omnipresence"
 cask "textexpander"
 cask "tripmode"
 cask "tunnelblick"
-# cask "visual-studio"
 cask "visual-studio-code"
 
 mas "Agenda", id: 1287445660
@@ -99,72 +88,5 @@ mas "Spark", id: 1176895641
 mas "Termius", id: 1176074088
 mas "The Unarchiver", id:425424353
 mas "Ulysses", id: 1225570693
-# mas "Xcode", id: 497799835
 mas "iHash", id: 763902043
 
-# ansible
-# zsh
-
-# adns
-# cabextract
-# cairo
-# cmake
-# dnsmasq
-# doctl
-# doxygen
-# fontconfig
-# freetype
-# gdbm
-# geckodriver
-# gettext
-# ghc
-# gitsh
-# glib
-# gmp
-# gnupg
-# gnutls
-# gobject-introspection
-# icu4c
-# imagemagick
-# jemalloc
-# jpeg
-# libassuan
-# libevent
-# libffi
-# libgcrypt
-# libgpg-error
-# libidn2
-# libksba
-# libpng
-# libtasn1
-# libtermkey
-# libtiff
-# libunistring
-# libusb
-# libuv
-# libvterm
-# libxml2
-# little-cms2
-# luajit
-# mobile-shell
-# msgpack
-# nettle
-# npth
-# openjpeg
-# openssl@1.1
-# p11-kit
-# pcre
-# pcre2
-# perl
-# phantomjs
-# pinentry
-# pixman
-# pkg-config
-# protobuf
-# ripgrep
-# spark
-# sshfs
-# unibilium
-# utf8proc
-# wxmac
-# xz

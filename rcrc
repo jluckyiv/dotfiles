@@ -1,2 +1,2 @@
 DOTFILES_DIRS="/Users/jluckyiv/dotfiles"
-UNDOTTED=Brewfile
+UNDOTTED=*Brewfile
