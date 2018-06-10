@@ -49,7 +49,7 @@ brew "youtube-dl"
 cask "1password"
 cask "backblaze"
 cask "bartender"
-cask "bettertouchtool"
+# cask "bettertouchtool"
 cask "cheatsheet"
 cask "chromedriver"
 cask "cleanmymac"
@@ -89,6 +89,7 @@ mas "Amphetamine", id: 937984704
 mas "Day One", id: 1055511498
 mas "Fantastical 2", id: 975937182
 mas "FruitJuice", id: 671736912
+mas "Magnet", id: 441258766
 mas "OmniFocus 2", id: 867299399
 mas "OmniOutliner 5", id: 1142578772
 mas "OneDrive",id: 823766827
