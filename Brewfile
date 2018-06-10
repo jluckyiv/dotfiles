@@ -10,13 +10,13 @@ tap "Goles/battery"
 brew "autoconf"
 brew "automake"
 brew "battery"
-brew "chromedriver"
 brew "coreutils"
 brew "ctags"
 brew "exercism"
 brew "fish"
 brew "gist"
 brew "git"
+brew "gpg"
 brew "hub"
 brew "libtool"
 brew "libxslt"
@@ -43,6 +43,7 @@ brew "the_silver_searcher"
 brew "tmux"
 brew "unixodbc"
 brew "wget"
+brew "yarn", args: ["--without-node"]
 brew "youtube-dl"
 
 cask "1password"
@@ -50,6 +51,7 @@ cask "backblaze"
 cask "bartender"
 cask "bettertouchtool"
 cask "cheatsheet"
+cask "chromedriver"
 cask "cleanmymac"
 cask "daisydisk"
 cask "dash"
@@ -103,7 +105,6 @@ mas "iHash", id: 763902043
 # zsh
 
 # adns
-# cabal-install
 # cabextract
 # cairo
 # cmake
