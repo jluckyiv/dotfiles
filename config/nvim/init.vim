@@ -18,7 +18,6 @@ Plug 'mattn/webapi-vim'               " Dependency for gist-vim
 Plug 'morhetz/gruvbox'                " Gruvbox colorscheme
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' } " IDE for Haskell
 Plug 'neomake/neomake'
-" Plug 'parsonsmatt/intero-neovim'      " IDE for Haskell
 Plug 'pbogut/deoplete-elm'            " Elm deoplete completion
 Plug 'pbrisbin/vim-mkdir'             " Automake nonexistent dirs
 Plug 'powerman/vim-plugin-AnsiEsc'    " ANSI escape codes in docs
