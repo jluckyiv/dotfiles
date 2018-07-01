@@ -19,7 +19,9 @@
 --exclude=\*.sln
 --exclude=\*.swp
 --exclude=\*.tar.\*
+--exclude=_build
 --exclude=bower_components
+--exclude=build
 --exclude=cscope.\*
 --exclude=db
 --exclude=dist
