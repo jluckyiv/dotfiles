@@ -1,10 +1,8 @@
 syntax enable
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'airblade/vim-gitgutter'         " See git changes in realtime
-Plug 'alx741/vim-stylishask'          " Format Haskell with Stylish Haskell
-Plug 'alx741/vim-hindent'             " Format Haskell with hindent
 Plug 'bfontaine/Brewfile.vim'         " Syntax for Brewfile
-Plug 'c-brenn/phoenix.vim'            " Phoenix navigation (needs projectionist)
 Plug 'christoomey/vim-tmux-navigator' " Use <c-h> between vim and tmux
 Plug 'ctrlpvim/ctrlp.vim'             " Fuzzy file finder
 Plug 'editorconfig/editorconfig-vim'  " .editorconfig integration
@@ -16,13 +14,10 @@ Plug 'mattn/emmet-vim'                " HTML magic
 Plug 'mattn/gist-vim'                 " Manipulate Gist files
 Plug 'mattn/webapi-vim'               " Dependency for gist-vim
 Plug 'morhetz/gruvbox'                " Gruvbox colorscheme
-Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' } " IDE for Haskell
-Plug 'neomake/neomake'
-Plug 'pbogut/deoplete-elm'            " Elm deoplete completion
+Plug 'pbogut/deoplete-elm'            " Elm completion
 Plug 'pbrisbin/vim-mkdir'             " Automake nonexistent dirs
 Plug 'powerman/vim-plugin-AnsiEsc'    " ANSI escape codes in docs
 Plug 'sheerun/vim-polyglot'           " Multi-language integration
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'slashmili/alchemist.vim'        " Elixir omnibus plugin
 Plug 'tpope/vim-capslock'             " Software capslock with <c-g>c
 Plug 'tpope/vim-commentary'           " Comment code
@@ -37,6 +32,7 @@ Plug 'tpope/vim-tbone'                " Use :Tmux commands
 Plug 'tpope/vim-unimpaired'           " Lots of cool tricks
 Plug 'tpope/vim-vinegar'              " Netrw enhancements
 Plug 'vim-airline/vim-airline'        " Pretty status bar
+Plug 'w0rp/ale'                       " Asynchronous linting engine
 call plug#end()
 
 " The Silver Searcher
@@ -51,19 +47,18 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-augroup localneomake
-  autocmd! BufReadPost,BufWritePost * Neomake
-augroup end
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
-" set cursorcolumn
-" set cursorline
-let mapleader=" "
 let g:alchemist_tag_disable = 1     " Use deoplete for tab completion
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\  'haskell': [
+\    'brittany',
+\    'hfmt',
+\    'remove_trailing_lines',
+\    'trim_whitespace'
+\  ],
+\}
 let g:deoplete#enable_at_startup = 1
 let g:marked_app = "Marked 2"
-let g:neomake_elixir_enabled_makers = ['mix', 'credo']
-let g:neomake_markdown_enabled_makers = []
 let g:polyglot_disabled = ['elm']
 let test#strategy = {
   \ 'nearest': 'neovim',
@@ -71,7 +66,9 @@ let test#strategy = {
   \ 'suite':   'basic',
 \}
 
-tmap <C-o> <C-\><C-n>
+let mapleader=" "
+
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 nnoremap <cr> :nohls<cr>
 nnoremap <leader><leader> <c-^>
@@ -82,6 +79,9 @@ nnoremap <leader>tn :TestNearest<cr>
 nnoremap <leader>ts :TestSuite<cr>
 nnoremap <leader>vi :tabe ~/.config/nvim/init.vim<cr>
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+tmap <C-o> <C-\><C-n>
+
 set background=dark
 set encoding=utf-8
 set expandtab
@@ -98,4 +98,5 @@ set splitbelow
 set splitright
 set tabstop=2
 set title
+
 colo gruvbox
