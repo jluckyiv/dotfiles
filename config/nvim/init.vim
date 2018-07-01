@@ -13,6 +13,7 @@ Plug 'janko-m/vim-test'               " Let's test!
 Plug 'mattn/emmet-vim'                " HTML magic
 Plug 'mattn/gist-vim'                 " Manipulate Gist files
 Plug 'mattn/webapi-vim'               " Dependency for gist-vim
+Plug 'mhinz/vim-mix-format'
 Plug 'morhetz/gruvbox'                " Gruvbox colorscheme
 Plug 'pbogut/deoplete-elm'            " Elm completion
 Plug 'pbrisbin/vim-mkdir'             " Automake nonexistent dirs
