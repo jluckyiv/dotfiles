@@ -3,7 +3,7 @@ cask_args appdir: "/Applications"
 tap "caskroom/cask"
 tap "linode/cli"
 tap "thoughtbot/formulae"
-tap "turforlag/cervezas"
+# tap "turforlag/cervezas" # for pdftk
 tap "Goles/battery"
 
 brew "autoconf"
@@ -24,29 +24,23 @@ brew "linode-cli"
 brew "mas"
 brew "mosh"
 brew "neovim"
-brew "node"
 brew "openssl"
 brew "pdfgrep"
-brew "pdftk"
+# brew "pdftk" # seems to be broken
 brew "poppler"
 brew "postgresql"
-brew "python2"
-brew "python3"
 brew "rcm"
 brew "readline"
 brew "reattach-to-user-namespace"
-brew "ruby"
 brew "sqlite"
 brew "ssh-copy-id"
 brew "the_silver_searcher"
 brew "tmux"
 brew "unixodbc"
 brew "wget"
-brew "yarn", args: ["--without-node"]
 brew "youtube-dl"
 
 cask "1password"
-cask "backblaze"
 cask "bartender"
 cask "cheatsheet"
 cask "chromedriver"
@@ -54,10 +48,8 @@ cask "cleanmymac"
 cask "daisydisk"
 cask "dash"
 cask "docker"
-cask "dotnet"
 cask "dropbox"
 cask "firefox"
-cask "go2shell"
 cask "google-backup-and-sync"
 cask "google-chrome"
 cask "google-hangouts"
@@ -67,7 +59,7 @@ cask "karabiner-elements"
 cask "launchbar"
 cask "malwarebytes"
 cask "marked"
-cask "microsoft-office"
+cask "ngrok"
 cask "omnipresence"
 cask "textexpander"
 cask "tripmode"
@@ -79,6 +71,7 @@ mas "Amphetamine", id: 937984704
 mas "Day One", id: 1055511498
 mas "Fantastical 2", id: 975937182
 mas "FruitJuice", id: 671736912
+mas "Go2Shell", id: 445770608
 mas "Magnet", id: 441258766
 mas "OmniFocus 2", id: 867299399
 mas "OmniOutliner 5", id: 1142578772
@@ -90,4 +83,3 @@ mas "Termius", id: 1176074088
 mas "The Unarchiver", id:425424353
 mas "Ulysses", id: 1225570693
 mas "iHash", id: 763902043
-
