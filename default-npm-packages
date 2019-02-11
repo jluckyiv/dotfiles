@@ -1,0 +1,17 @@
+awsmobile-cli
+create-elm-app
+elm-analyse
+elm-format
+elm-live
+elm-oracle
+elm-test
+eslint
+firebase-tools
+gh-pages
+http-server
+netlify-cli
+nodemon
+parcel-bundler
+typescript
+uglify-js
+yarn
