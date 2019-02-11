@@ -1,7 +1,6 @@
 cask_args appdir: "/Applications"
 
 tap "caskroom/cask"
-tap "linode/cli"
 tap "thoughtbot/formulae"
 # tap "turforlag/cervezas" # for pdftk
 tap "Goles/battery"
@@ -10,18 +9,17 @@ brew "autoconf"
 brew "automake"
 brew "battery"
 brew "coreutils"
-brew "ctags"
+# brew "ctags" # killing CPU
 brew "exercism"
 brew "fish"
 brew "gist"
 brew "git"
-brew "gpg"
 brew "hub"
 brew "libtool"
 brew "libxslt"
 brew "libyaml"
-brew "linode-cli"
 brew "mas"
+brew "mono"
 brew "mosh"
 brew "neovim"
 brew "openssl"
@@ -61,9 +59,16 @@ cask "malwarebytes"
 cask "marked"
 cask "ngrok"
 cask "omnipresence"
+cask "pgadmin4"
+cask "poll-everywhere"
+cask "postman"
+cask "powershell"
+cask "qlmarkdown"
+cask "quicklook-json"
 cask "textexpander"
 cask "tripmode"
 cask "tunnelblick"
+cask "visual-studio"
 cask "visual-studio-code"
 
 mas "Agenda", id: 1287445660
@@ -72,7 +77,9 @@ mas "Day One", id: 1055511498
 mas "Fantastical 2", id: 975937182
 mas "FruitJuice", id: 671736912
 mas "Go2Shell", id: 445770608
+mas "Keynote", id: 409183694 
 mas "Magnet", id: 441258766
+mas "MindNode 5", id: 1289197285
 mas "OmniFocus 2", id: 867299399
 mas "OmniOutliner 5", id: 1142578772
 mas "OneDrive",id: 823766827
@@ -82,4 +89,5 @@ mas "Spark", id: 1176895641
 mas "Termius", id: 1176074088
 mas "The Unarchiver", id:425424353
 mas "Ulysses", id: 1225570693
+mas "WiFi Explorer", id: 494803304
 mas "iHash", id: 763902043
