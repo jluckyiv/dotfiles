@@ -1,6 +1,6 @@
 [init]
 	defaultBranch = main
-  ; templateDir = /Users/jluckyiv/.config/git/template
+  templateDir = /Users/jluckyiv/.config/git/template
 [alias]
 	aa = add --all
 	br = branch
@@ -18,26 +18,23 @@
 [user]
 	email = jack@jacksonlucky.net
 	name = Jackson Lucky
-	signingkey = /Users/jluckyiv/.ssh/id_ed25519.pub
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGmxOdDFPYjALVPPA+jNyqttBPox/l4j9ucXzV4NUqPi
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-[include]
-    path = .gitconfig.secret
 
-[url "https://jluckyiv:***REDACTED***@github.com"]
+[url "https://jluckyiv:{{- onepasswordRead "op://Personal/Github Token Repo/credential" -}}@github.com"]
 	insteadOf = https://github.com
 [gpg]
 	format = ssh
-; [gpg "ssh"]
-; 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [commit]
 	gpgsign = true
 [credential "https://github.com"]
-	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
+
