@@ -18,7 +18,7 @@
 [user]
 	email = jack@jacksonlucky.net
 	name = Jackson Lucky
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGmxOdDFPYjALVPPA+jNyqttBPox/l4j9ucXzV4NUqPi
+  signingkey = {{- onepasswordRead "op://Personal/Base SSH Key/public key" }}
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
