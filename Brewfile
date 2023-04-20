@@ -208,3 +208,43 @@ cask "textexpander"
 cask "visual-studio-code"
 cask "vlc"
 cask "zoom"
+mas "1Password for Safari", id: 1569813296
+mas "Amphetamine", id: 937984704
+mas "Cardhop", id: 1290358394
+mas "Compressor", id: 424390742
+mas "Day One", id: 1055511498
+mas "Dice", id: 1479250666
+mas "Drafts", id: 1435957248
+mas "DuckDuckGo Privacy for Safari", id: 1482920575
+mas "Fantastical", id: 975937182
+mas "Final Cut Pro", id: 424389933
+mas "FoodNoms", id: 1479461686
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Kindle", id: 405399194
+mas "Logic Pro", id: 634148309
+mas "MainStage", id: 634159523
+mas "Mapper", id: 1589391989
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "Motion", id: 434290957
+mas "Numbers", id: 409203825
+mas "Octotree", id: 1457450145
+mas "OmniOutliner", id: 1142578772
+mas "OneDrive", id: 823766827
+mas "Pages", id: 409201541
+mas "Paprika Recipe Manager 3", id: 1303222628
+mas "Parcel", id: 639968404
+mas "Patterns", id: 429449079
+mas "Reeder", id: 1529448980
+mas "Save to Reader", id: 1640236961
+mas "Super Agent", id: 1568262835
+mas "Things", id: 904280696
+mas "Todoist", id: 585829637
+mas "Trello", id: 1278508951
+mas "uBlacklist for Safari", id: 1547912640
+mas "URL Linker", id: 1289119450
+mas "Vinegar", id: 1591303229
