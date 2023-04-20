@@ -1,39 +1,48 @@
 [init]
-	defaultBranch = main
+  defaultBranch = main
   templateDir = /Users/jluckyiv/.config/git/template
+
 [alias]
-	aa = add --all
-	br = branch
-	ci = commit
-	cia = commit --amend --no-edit
-	cim = commit -m
-	co = checkout
-	cob = checkout -b
-	gi = "{ curl -sL https://www.toptal.com/developers/gitignore/api/ ;}; gi"
-	ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
-	last = log -1 HEAD
-	st = status
-	unstage = reset HEAD --
+  aa = add --all
+  br = branch
+  ci = commit
+  cia = commit --amend --no-edit
+  cim = commit -m
+  co = checkout
+  cob = checkout -b
+  gi = "{ curl -sL https://www.toptal.com/developers/gitignore/api/ ;}; gi"
+  ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
+  last = log -1 HEAD
+  st = status
+  unstage = reset HEAD --
   visual = !gitfox
+
 [user]
-	email = jack@jacksonlucky.net
-	name = Jackson Lucky
+  email = jack@jacksonlucky.net
+  name = Jackson Lucky
   signingkey = {{- onepasswordRead "op://Personal/Base SSH Key/public key" }}
+
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+
 [url "https://jluckyiv:{{- onepasswordRead "op://Personal/Github Token Repo/credential" -}}@github.com"]
-	insteadOf = https://github.com
+  insteadOf = https://github.com
+
 [gpg]
-	format = ssh
+  format = ssh
+
 [gpg "ssh"]
   program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
 [commit]
-	gpgsign = true
+  gpgsign = true
+
 [credential "https://github.com"]
-	helper = !/opt/homebrew/bin/gh auth git-credential
+  helper = !/opt/homebrew/bin/gh auth git-credential
+
 [credential "https://gist.github.com"]
-	helper = !/opt/homebrew/bin/gh auth git-credential
+  helper = !/opt/homebrew/bin/gh auth git-credential
 
