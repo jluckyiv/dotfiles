@@ -113,7 +113,6 @@ mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "Logic Pro", id: 634148309
 mas "MainStage", id: 634159523
-mas "Mapper", id: 1589391989
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft Outlook", id: 985367838
 mas "Microsoft PowerPoint", id: 462062816
@@ -134,6 +133,5 @@ mas "Things", id: 904280696
 mas "Todoist", id: 585829637
 mas "Trello", id: 1278508951
 mas "URL Linker", id: 1289119450
-mas "Vinegar", id: 1591303229
 mas "iMovie", id: 408981434
 mas "uBlacklist for Safari", id: 1547912640
