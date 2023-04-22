@@ -37,6 +37,7 @@ brew "gnupg"
 brew "go"
 brew "go-task"
 brew "goreleaser/tap/goreleaser"
+brew "gum"
 brew "grc"
 brew "htop"
 brew "hugo"
@@ -55,6 +56,7 @@ brew "netlify-cli"
 brew "node"
 brew "pandoc"
 brew "pre-commit"
+brew "poppler"
 brew "python"
 brew "ripgrep"
 brew "ruby"
@@ -94,6 +96,7 @@ cask "kitty"
 cask "moom"
 cask "nordvpn"
 cask "obsidian"
+cask "setapp"
 cask "textexpander"
 cask "vlc"
 cask "zoom"
@@ -107,7 +110,6 @@ mas "Drafts", id: 1435957248
 mas "DuckDuckGo Privacy for Safari", id: 1482920575
 mas "Fantastical", id: 975937182
 mas "Final Cut Pro", id: 424389933
-mas "FoodNoms", id: 1479461686
 mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
