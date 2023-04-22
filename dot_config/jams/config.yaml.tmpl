@@ -1,0 +1,25 @@
+# ~/.config/jams/config.yaml
+jams-access-email: {{ onepasswordRead "op://Personal/JAMSAccess/username" }}
+jams-access-password: {{ onepasswordRead "op://Personal/JAMSAccess/password" }}
+jams-access-base-url: {{ onepasswordRead "op://Personal/JAMSAccess/website" }}
+pb-admin-identity: {{ onepasswordRead "op://Personal/jams-proxy/username" }}
+pb-admin-password: {{ onepasswordRead "op://Personal/jams-proxy/password" }}
+pb-admin-base-url: {{ onepasswordRead "op://Personal/jams-proxy/website" }}
+
+data-path: /Users/jluckyiv/_JAMS/
+
+ms-authority: https://login.microsoftonline.com/{{ onepasswordRead "op://Personal/JAMS Sync Azure/tenant id" }}
+ms-tenant-id: {{ onepasswordRead "op://Personal/JAMS Sync Azure/tenant id" }}
+ms-client-id: {{ onepasswordRead "op://Personal/JAMS Sync Azure/client id" }}
+ms-scopes:
+  - "openid"
+  - "profile"
+  - "email"
+  - "User.Read"
+  - "Mail.Read"
+  - "Calendars.ReadWrite"
+ms-redirect-uri: http://localhost
+ms-username: {{ onepasswordRead "op://Personal/JAMS/username" }}
+
+hostname: localhost
+port: 4000
