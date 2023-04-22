@@ -53,12 +53,11 @@ set -Ux FZF_CTRL_R_OPTS "--border-label=' history ' \
 fish_add_path /opt/homebrew/bin # https://brew.sh/
 fish_add_path /opt/homebrew/sbin
 fish_add_path /opt/homebrew/opt/sqlite/bin
-# fish_add_path /opt/homebrew/opt/openjdk/bi
 fish_add_path $GOPATH/bin
 fish_add_path $PNPM_HOME
 fish_add_path $HOME/.local/bin
 # fish_add_path $HOME/.config/tmux/plugins/tmux-nvr/bin
-# fish_add_path $HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin
+fish_add_path $HOME/.tmux/plugins/t-smart-tmux-session-manager/bin
 fish_add_path $HOME/.config/bin # my custom scripts
 
 source ~/.asdf/asdf.fish

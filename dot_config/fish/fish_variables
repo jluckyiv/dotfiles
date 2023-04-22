@@ -11,7 +11,6 @@ SETUVAR --export KIT_EDITOR:/opt/homebrew/bin/nvim
 SETUVAR --export LANG:en_US\x2eUTF\x2d8
 SETUVAR --export LC_ALL:en_US\x2eUTF\x2d8
 SETUVAR --export --path NODE_PATH:\x7e/\x2envm/versions/node/v16\x2e19\x2e0/bin/node
-# SETUVAR --export PAGER:/Users/jluckyiv/\x2elocal/bin/nvimpager
 SETUVAR --export VISUAL:nvim
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_upgraded_to_4_4:\x1d
@@ -44,4 +43,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/Users/jluckyiv/\x2econfig/bin\x1e/Users/jluckyiv/\x2easdf/shims\x1e/Users/jluckyiv/\x2easdf/bin\x1e/Users/jluckyiv/Library/pnpm\x1e/Users/jluckyiv/\x2elocal/bin\x1e/Users/jluckyiv/go/bin\x1e/opt/homebrew/opt/sqlite/bin\x1e/opt/homebrew/sbin\x1e/opt/homebrew/bin\x1e/opt/homebrew/opt/fzf/bin
+SETUVAR fish_user_paths:/Users/jluckyiv/\x2etmux/plugins/t\x2dsmart\x2dtmux\x2dsession\x2dmanager/bin\x1e/Users/jluckyiv/\x2econfig/bin\x1e/Users/jluckyiv/\x2easdf/shims\x1e/Users/jluckyiv/\x2easdf/bin\x1e/Users/jluckyiv/Library/pnpm\x1e/Users/jluckyiv/\x2elocal/bin\x1e/Users/jluckyiv/go/bin\x1e/opt/homebrew/opt/sqlite/bin\x1e/opt/homebrew/sbin\x1e/opt/homebrew/bin\x1e/opt/homebrew/opt/fzf/bin
