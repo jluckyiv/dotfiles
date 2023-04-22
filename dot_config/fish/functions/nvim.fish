@@ -43,5 +43,3 @@ function nvims
     end
     env NVIM_APPNAME=$config nvim $argv
 end
-
-bind \ca 'nvims\n'
