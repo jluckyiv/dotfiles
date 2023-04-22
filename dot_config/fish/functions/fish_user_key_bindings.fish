@@ -1,4 +1,4 @@
 function fish_user_key_bindings
-    fzf_key_bindings
-    bind \ca "nvims\n"
+    key_bindings_fzf
+    key_bindings_nvim
 end
