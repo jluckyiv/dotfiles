@@ -55,6 +55,7 @@ brew "neovim", args: ["HEAD"]
 brew "netlify-cli"
 brew "node"
 brew "pandoc"
+brew "pdf-diff"
 brew "pre-commit"
 brew "poppler"
 brew "python"
