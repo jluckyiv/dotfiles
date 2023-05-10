@@ -10,6 +10,7 @@ tap "homebrew/core"
 tap "homebrew/services"
 
 brew "ansible"
+brew "azure-cli"
 brew "bat"
 brew "cask"
 brew "charmbracelet/tap/charm"
