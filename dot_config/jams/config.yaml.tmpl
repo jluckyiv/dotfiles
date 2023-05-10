@@ -1,10 +1,10 @@
 # ~/.config/jams/config.yaml
-jams-access-email: {{ onepasswordRead "op://Personal/JAMSAccess/username" }}
-jams-access-password: {{ onepasswordRead "op://Personal/JAMSAccess/password" }}
-jams-access-base-url: {{ onepasswordRead "op://Personal/JAMSAccess/website" }}
-pb-admin-identity: {{ onepasswordRead "op://Personal/jams-proxy/username" }}
-pb-admin-password: {{ onepasswordRead "op://Personal/jams-proxy/password" }}
-pb-admin-base-url: {{ onepasswordRead "op://Personal/jams-proxy/website" }}
+jams-access-email: {{ onepasswordRead "op://JAMS/JAMSAccess/username" }}
+jams-access-password: {{ onepasswordRead "op://JAMS/JAMSAccess/password" }}
+jams-access-base-url: {{ onepasswordRead "op://JAMS/JAMSAccess/website" }}
+pb-admin-identity: {{ onepasswordRead "op://JAMS/jams-proxy/username" }}
+pb-admin-password: {{ onepasswordRead "op://JAMS/jams-proxy/password" }}
+pb-admin-base-url: {{ onepasswordRead "op://JAMS/jams-proxy/website" }}
 
 data-path: /Users/jluckyiv/_JAMS/
 
@@ -19,7 +19,7 @@ ms-scopes:
   - "Mail.Read"
   - "Calendars.ReadWrite"
 ms-redirect-uri: http://localhost
-ms-username: {{ onepasswordRead "op://Personal/JAMS/username" }}
+ms-username: {{ onepasswordRead "op://JAMS/JAMS/username" }}
 
 hostname: localhost
 port: 4000
