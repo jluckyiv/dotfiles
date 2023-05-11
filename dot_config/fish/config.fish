@@ -60,4 +60,22 @@ fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.tmux/plugins/t-smart-tmux-session-manager/bin
 fish_add_path $HOME/.config/bin # my custom scripts
 
+abbr -a -- bb 'brew bundle install --cleanup'
+abbr -a -- g git
+abbr -a -- gg lazygit
+abbr -a -- ls exa
+abbr -a -- sf 'source ~/.config/fish/config.fish'
+abbr -a -- sfc 'source ~/.config/fish/config.fish'
+abbr -a -- st 'tmux source ~/.config/tmux/tmux.conf'
+abbr -a -- ta 'tmux a'
+abbr -a -- tat 'tmux attach -t'
+abbr -a -- td 't ~/.local/share/chezmoi'
+abbr -a -- tk 'tmux kill-server'
+abbr -a -- tldr tldr\ --list\ \|\ fzf\ --header\ \'tldr\ \(tealdeer\)\'\ --reverse\ --preview\ \'tldr\ \{1\}\'\ --preview-window=right,80\%\ \|\ xargs\ tldr
+abbr -a -- tn 'tmux new -s (basename (pwd))'
+abbr -a -- vb 'chezmoi edit --apply ~/Brewfile'
+abbr -a -- vf 'chezmoi edit --apply ~/.config/fish/config.fish'
+abbr -a -- vk 'chezmoi edit --apply ~/.config/kitty/kitty.conf'
+abbr -a -- vt 'chezmoi edit --apply ~/.config/tmux/tmux.conf'
+
 source ~/.asdf/asdf.fish
