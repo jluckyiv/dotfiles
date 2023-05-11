@@ -60,12 +60,11 @@ fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.tmux/plugins/t-smart-tmux-session-manager/bin
 fish_add_path $HOME/.config/bin # my custom scripts
 
-abbr -a -- bb 'brew bundle install --cleanup'
+abbr -a -- bb 'brew bundle install --cleanup --file ~/Brewfile'
 abbr -a -- g git
 abbr -a -- gg lazygit
 abbr -a -- ls exa
 abbr -a -- sf 'source ~/.config/fish/config.fish'
-abbr -a -- sfc 'source ~/.config/fish/config.fish'
 abbr -a -- st 'tmux source ~/.config/tmux/tmux.conf'
 abbr -a -- ta 'tmux a'
 abbr -a -- tat 'tmux attach -t'
