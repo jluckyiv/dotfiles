@@ -60,10 +60,14 @@ fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.tmux/plugins/t-smart-tmux-session-manager/bin
 fish_add_path $HOME/.config/bin # my custom scripts
 
+abbr -a -- amc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/AMC checklist.pages"'
 abbr -a -- bb 'brew bundle install --cleanup --file ~/Brewfile'
+abbr -a -- fsc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/FSC checklist.pages"'
 abbr -a -- g git
 abbr -a -- gg lazygit
 abbr -a -- ls exa
+abbr -a -- pp 'open -a "Microsoft PowerPoint"'
+abbr -a -- sc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/SC checklist.pages"'
 abbr -a -- sf 'source ~/.config/fish/config.fish'
 abbr -a -- st 'tmux source ~/.config/tmux/tmux.conf'
 abbr -a -- ta 'tmux a'
@@ -76,5 +80,7 @@ abbr -a -- vb 'chezmoi edit --apply ~/Brewfile'
 abbr -a -- vf 'chezmoi edit --apply ~/.config/fish/config.fish'
 abbr -a -- vk 'chezmoi edit --apply ~/.config/kitty/kitty.conf'
 abbr -a -- vt 'chezmoi edit --apply ~/.config/tmux/tmux.conf'
+abbr -a -- word 'open -a "Microsoft Word"'
+abbr -a -- xl 'open -a "Microsoft Excel"'
 
 source ~/.asdf/asdf.fish
