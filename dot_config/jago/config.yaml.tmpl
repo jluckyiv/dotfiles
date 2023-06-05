@@ -4,15 +4,6 @@
 path:
   cache: "$HOME/.cache/jago"
   data: "$HOME/.local/share/jago"
-login:
-  form:
-    selector: "form"
-  email:
-    selector: "input#email"
-  password:
-    selector: "input#password"
-  authenticated:
-    selector: "body.authenticated"
 credentials:
   username: {{ onepasswordRead "op://JAMS/JAMSAccess/username" }}
   password: {{ onepasswordRead "op://JAMS/JAMSAccess/password" }}
