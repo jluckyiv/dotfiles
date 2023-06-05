@@ -84,3 +84,4 @@ abbr -a -- word 'open -a "Microsoft Word"'
 abbr -a -- xl 'open -a "Microsoft Excel"'
 
 source ~/.asdf/asdf.fish
+source ~/.config/op/plugins.sh
