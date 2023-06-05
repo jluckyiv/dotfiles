@@ -16,4 +16,6 @@ login:
 credentials:
   username: {{ onepasswordRead "op://JAMS/JAMSAccess/username" }}
   password: {{ onepasswordRead "op://JAMS/JAMSAccess/password" }}
+  awselb: {{ onepasswordRead "op://JAMS/JAMSAccess/AWSELB" }}
+  awselbcors: {{ onepasswordRead "op://JAMS/JAMSAccess/AWSELBCORS" }}
 
