@@ -80,6 +80,7 @@ abbr -a -- vb 'chezmoi edit --apply ~/Brewfile'
 abbr -a -- vf 'chezmoi edit --apply ~/.config/fish/config.fish'
 abbr -a -- vk 'chezmoi edit --apply ~/.config/kitty/kitty.conf'
 abbr -a -- vt 'chezmoi edit --apply ~/.config/tmux/tmux.conf'
+abbr -a -- pdfe 'open -a "PDF Expert"'
 abbr -a -- word 'open -a "Microsoft Word"'
 abbr -a -- xl 'open -a "Microsoft Excel"'
 
