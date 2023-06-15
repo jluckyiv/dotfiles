@@ -81,7 +81,7 @@ brew "zoxide"
 
 cask "1password"
 cask "1password-cli"
-cask "airbuddy"
+# cask "airbuddy" # use Setapp
 cask "alfred"
 cask "amethyst"
 cask "basictex"
