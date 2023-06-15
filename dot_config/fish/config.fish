@@ -66,6 +66,7 @@ abbr -a -- fsc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~ap
 abbr -a -- g git
 abbr -a -- gg lazygit
 abbr -a -- ls exa
+abbr -a -- pdfe 'open -a "PDF Expert"'
 abbr -a -- pp 'open -a "Microsoft PowerPoint"'
 abbr -a -- sc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/SC checklist.pages"'
 abbr -a -- sf 'source ~/.config/fish/config.fish'
