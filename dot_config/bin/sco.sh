@@ -12,6 +12,18 @@ if [[ ! -f "$input_file" ]]; then
 	exit 1
 fi
 
+if grep -q "fixme" "$1"; then
+	echo "Error: File contains 'fixme'"
+	grep -n "fixme" "$1"
+	exit 1
+fi
+
+if grep -E '\s+:::' "$1"; then
+	echo "Error: File contains '^\s+:::'"
+	grep -n -E '\s+:::' "$1"
+	exit 1
+fi
+
 max_number=0
 for file in *; do
 	if [[ $file =~ ^Scheduling[[:space:]]Order[[:space:]]No\.[[:space:]][0-9]{1,2}\.docx$ ]]; then
