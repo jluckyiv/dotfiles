@@ -4,10 +4,9 @@
 path:
   cache: ".cache/jago"
   data: ".local/share/jago"
-credentials:
+jams:
   username: {{ onepasswordRead "op://JAMS/JAMSAccess/username" }}
   password: {{ onepasswordRead "op://JAMS/JAMSAccess/password" }}
-  awselb: {{ onepasswordRead "op://JAMS/JAMSAccess/AWSELB" }}
-  awselbcors: {{ onepasswordRead "op://JAMS/JAMSAccess/AWSELBCORS" }}
-  pocketbase: {{ onepasswordRead "op://JAMS/pocketbase/credential" }}
-
+pocketbase:
+  username: {{ onepasswordRead "op://JAMS/jams-proxy/username"}}
+  password: {{ onepasswordRead "op://JAMS/jams-proxy/password"}}
