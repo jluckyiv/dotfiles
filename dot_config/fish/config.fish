@@ -89,3 +89,4 @@ abbr -a -- xl 'open -a "Microsoft Excel"'
 
 source ~/.asdf/asdf.fish
 source ~/.config/op/plugins.sh
+source ~/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
