@@ -65,7 +65,7 @@ abbr -a -- bb 'brew bundle install --cleanup --file ~/Brewfile'
 abbr -a -- fsc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/FSC checklist.pages"'
 abbr -a -- g git
 abbr -a -- gg lazygit
-abbr -a -- ls exa
+abbr -a -- ls eza
 abbr -a -- pdfe 'open -a "PDF Expert"'
 abbr -a -- pp 'open -a "Microsoft PowerPoint"'
 abbr -a -- sc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/SC checklist.pages"'
@@ -83,6 +83,7 @@ abbr -a -- vkb 'chezmoi edit --apply ~/.config/karabiner/karabiner.json'
 abbr -a -- vkt 'chezmoi edit --apply ~/.config/kitty/kitty.conf'
 abbr -a -- vj 'chezmoi edit --apply ~/.config/jago/config.yaml'
 abbr -a -- vt 'chezmoi edit --apply ~/.config/tmux/tmux.conf'
+abbr -a -- vv 'chezmoi edit --apply ~/.config/nvim/lua/'
 abbr -a -- pdfe 'open -a "PDF Expert"'
 abbr -a -- word 'open -a "Microsoft Word"'
 abbr -a -- xl 'open -a "Microsoft Excel"'
