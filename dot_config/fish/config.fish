@@ -28,6 +28,12 @@ set -Ux LC_ALL en_US.UTF-8
 set -Ux NODE_PATH "~/.nvm/versions/node/v16.19.0/bin/node" # 'nvm-sh/nvm'
 set -Ux VISUAL nvim
 
+
+
+#bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
 set -Ux FZF_DEFAULT_OPTS "--reverse \
 --border rounded \
 --no-info \
