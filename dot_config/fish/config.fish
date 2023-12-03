@@ -54,7 +54,6 @@ set -Ux FZF_TMUX_OPTS "-p \
 set -Ux FZF_CTRL_R_OPTS "--border-label=' history ' \
 --header='ctrl-d: delete' \
 --prompt='  '"
-
 # ordered by priority - bottom up
 fish_add_path /opt/homebrew/bin # https://brew.sh/
 fish_add_path /opt/homebrew/sbin
@@ -65,6 +64,7 @@ fish_add_path $HOME/.local/bin
 # fish_add_path $HOME/.config/tmux/plugins/tmux-nvr/bin
 fish_add_path $HOME/.tmux/plugins/t-smart-tmux-session-manager/bin
 fish_add_path $HOME/.config/bin # my custom scripts
+fish_add_path $HOME/.cargo/bin
 
 abbr -a -- amc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/AMC checklist.pages"'
 abbr -a -- bb 'brew bundle install --cleanup --file ~/Brewfile'
