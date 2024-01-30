@@ -99,6 +99,9 @@ abbr -a -- pdfe 'open -a "PDF Expert"'
 abbr -a -- word 'open -a "Microsoft Word"'
 abbr -a -- xl 'open -a "Microsoft Excel"'
 
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 source ~/.asdf/asdf.fish
 source ~/.config/op/plugins.sh
 source ~/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
