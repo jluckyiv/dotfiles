@@ -67,6 +67,7 @@ fish_add_path $HOME/.config/bin # my custom scripts
 fish_add_path $HOME/.cargo/bin
 
 abbr -a -- amc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/AMC checklist.pages"'
+abbr -a -- arst asdf
 abbr -a -- bb 'brew bundle install --cleanup --file ~/Brewfile'
 abbr -a -- fsc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/FSC checklist.pages"'
 abbr -a -- g git
