@@ -71,6 +71,7 @@ abbr -a -- bb 'brew bundle install --cleanup --file ~/Brewfile'
 abbr -a -- fsc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/FSC checklist.pages"'
 abbr -a -- g git
 abbr -a -- gg lazygit
+abbr -a -- ll 'eza -l'
 abbr -a -- ls eza
 abbr -a -- pdfe 'open -a "PDF Expert"'
 abbr -a -- pp 'open -a "Microsoft PowerPoint"'
