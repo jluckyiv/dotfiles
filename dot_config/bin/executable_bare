@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Check if an argument is provided
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <path>"
+    exit 1
+fi
+
+# Get the last segment of the path
+new_folder=$(basename "$1")
+
+# Create the folder
+mkdir -p "$new_folder"
+
+# Change directory to the new folder
+cd "$new_folder"
+
+# Display the current working directory
+echo "Current directory: $(pwd)"
+
+# Check if gh command-line tool is available
+if command -v gh &> /dev/null; then
+    # Use gh repo clone with --bare flag
+    gh repo clone "$new_folder".git -- .bare --bare
+else
+    # Use git command to clone the repository
+    git clone --bare git@github.com:"$1".git .bare
+fi
+
+# Set the .bare directory as the git directory
+echo "gitdir: ./.bare" > .git
+
+# Give an instruction to the user
+echo "Use `git worktree add main` to create a working tree for the main branch."
+echo "Use `git worktree add <branch> <path>` to create a working tree for a new branch."
