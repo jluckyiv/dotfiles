@@ -100,7 +100,6 @@ abbr -a -- vvl 'chezmoi edit --apply ~/.config/nvim/lua/config/lazy.lua'
 abbr -a -- vvo 'chezmoi edit --apply ~/.config/nvim/lua/config/options.lua'
 abbr -a -- vvs 'chezmoi edit --apply ~/.config/nvim/lua/plugins/colorscheme.lua'
 abbr -a -- vw 'chezmoi edit --apply ~/.wezterm.lua'
-abbr -a -- pdfe 'open -a "PDF Expert"'
 abbr -a -- word 'open -a "Microsoft Word"'
 abbr -a -- xl 'open -a "Microsoft Excel"'
 
