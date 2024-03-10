@@ -4,7 +4,8 @@ local function scheme_for_appearance(appearance)
 		return "Tokyo Night"
 	else
 		-- return "Catppuccin Latte"
-		return "Tokyo Night Day"
+		-- return "Tokyo Night Day"
+		return "Tokyo Night"
 	end
 end
 -- Pull in the wezterm API
