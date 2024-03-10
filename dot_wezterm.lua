@@ -22,6 +22,7 @@ config.window_background_opacity = 0.8
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 17.0
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 -- and finally, return the configuration to wezterm
 return config
