@@ -121,7 +121,9 @@ cask "setapp"
 cask "textexpander"
 cask "visual-studio-code"
 cask "vlc"
+cask "warp"
 cask "wezterm"
+cask "zed"
 cask "zoom"
 
 mas "Amphetamine", id: 937984704
