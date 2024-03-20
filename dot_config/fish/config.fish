@@ -11,6 +11,7 @@
 
 starship init fish | source # https://starship.rs/
 zoxide init fish | source # 'ajeetdsouza/zoxide'
+atuin init fish | source
 
 set -gx CPPFLAGS -I/opt/homebrew/opt/sqlite/include
 set -gx LDFLAGS -L/opt/homebrew/opt/sqlite/lib
@@ -27,8 +28,6 @@ set -Ux LANG en_US.UTF-8
 set -Ux LC_ALL en_US.UTF-8
 set -Ux NODE_PATH "~/.nvm/versions/node/v16.19.0/bin/node" # 'nvm-sh/nvm'
 set -Ux VISUAL nvim
-
-
 
 #bun
 set --export BUN_INSTALL "$HOME/.bun"
