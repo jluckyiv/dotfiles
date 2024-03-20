@@ -7,8 +7,14 @@ colour=green
 regexp=^PASS$
 colour=green
 -
-regexp=^(ok|\?) .*
+regexp=^ok .*[^\(cached\)]$
+colour=green
+-
+regexp=^ok .*\(cached\)$
 colour=cyan
+-
+regexp=^(\?) .*
+colour=white
 -
 regexp=--- FAIL: .*
 colour=red
