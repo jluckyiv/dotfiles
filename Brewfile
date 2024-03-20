@@ -9,6 +9,7 @@ tap "homebrew/services"
 tap "oven-sh/bun"
 
 brew "ansible"
+brew "atuin"
 brew "azure-cli"
 brew "bat"
 brew "bun"
