@@ -3,9 +3,9 @@ local function scheme_for_appearance(appearance)
 		-- return "Catppuccin Mocha"
 		return "Tokyo Night"
 	else
-		-- return "Catppuccin Latte"
+		return "Catppuccin Latte"
 		-- return "Tokyo Night Day"
-		return "Tokyo Night"
+		-- return "Tokyo Night"
 	end
 end
 -- Pull in the wezterm API
@@ -18,7 +18,7 @@ local config = wezterm.config_builder()
 
 -- For example, changing the color scheme:
 config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.9
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 17.0
