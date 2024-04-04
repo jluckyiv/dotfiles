@@ -68,9 +68,12 @@ fish_add_path $HOME/.cargo/bin
 abbr -a -- amc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/AMC checklist.pages"'
 abbr -a -- arst asdf
 abbr -a -- bb 'brew bundle install --cleanup --file ~/Brewfile'
+abbr -a -- cd z
+abbr -a -- cea 'chezmoi edit --apply'
 abbr -a -- fsc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/FSC checklist.pages"'
 abbr -a -- g git
 abbr -a -- gg lazygit
+abbr -a -- hint 'gh api "/repos/rstacruz/cheatsheets/git/trees/master?recursive=false" -q ".tree[].path" | rg ".md" | fzf --header "rstacruz/cheatsheets" --reverse --preview "curl -s https://raw.githubusercontent.com/rstacruz/cheatsheets/master/{1}" --preview-window=right,80% | xargs echo "https://raw.githubusercontent.com/rstacruz/cheatsheets/master/$1" | sed "s/ //g" | xargs glow --pager'
 abbr -a -- ll 'eza -l'
 abbr -a -- ls eza
 abbr -a -- pdfe 'open -a "PDF Expert"'
@@ -89,12 +92,12 @@ abbr -a -- tr 'tldr --list | fzf --header "tldr (tealdeer)" --reverse --preview 
 abbr -a -- tree 'eza --tree'
 abbr -a -- vb 'chezmoi edit --apply ~/Brewfile'
 abbr -a -- vf 'chezmoi edit --apply ~/.config/fish/config.fish'
+abbr -a -- vj 'chezmoi edit --apply ~/.config/jago/config.yaml'
 abbr -a -- vkb 'chezmoi edit --apply ~/.config/karabiner/karabiner.json'
 abbr -a -- vkt 'chezmoi edit --apply ~/.config/kitty/kitty.conf'
-abbr -a -- vj 'chezmoi edit --apply ~/.config/jago/config.yaml'
 abbr -a -- vt 'chezmoi edit --apply ~/.config/tmux/tmux.conf'
-abbr -a -- vvc 'chezmoi edit --apply ~/.config/nvim/lua/config/'
 abbr -a -- vva 'chezmoi edit --apply ~/.config/nvim/lua/config/autocmds.lua'
+abbr -a -- vvc 'chezmoi edit --apply ~/.config/nvim/lua/config/'
 abbr -a -- vvk 'chezmoi edit --apply ~/.config/nvim/lua/config/keymaps.lua'
 abbr -a -- vvl 'chezmoi edit --apply ~/.config/nvim/lua/config/lazy.lua'
 abbr -a -- vvo 'chezmoi edit --apply ~/.config/nvim/lua/config/options.lua'
@@ -102,6 +105,8 @@ abbr -a -- vvs 'chezmoi edit --apply ~/.config/nvim/lua/plugins/colorscheme.lua'
 abbr -a -- vw 'chezmoi edit --apply ~/.wezterm.lua'
 abbr -a -- word 'open -a "Microsoft Word"'
 abbr -a -- xl 'open -a "Microsoft Excel"'
+abbr -a -- zz 'z -'
+abbr -a --position anywhere -- !! '$history[1]'
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
