@@ -107,6 +107,7 @@ abbr -a -- word 'open -a "Microsoft Word"'
 abbr -a -- xl 'open -a "Microsoft Excel"'
 abbr -a -- zz 'z -'
 abbr -a --position anywhere -- !! '$history[1]'
+abbr -a --position anywhere -- rmmd 'README.md'
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
