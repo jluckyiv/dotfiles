@@ -28,6 +28,9 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
 
+[pull]
+  rebase = false
+
 [url "https://jluckyiv:{{- onepasswordRead "op://Personal/Github Token Repo/credential" -}}@github.com"]
   insteadOf = https://github.com
 
