@@ -70,6 +70,7 @@ abbr -a -- arst asdf
 abbr -a -- bb 'brew bundle install --cleanup --file ~/Brewfile'
 abbr -a -- cd z
 abbr -a -- cea 'chezmoi edit --apply'
+abbr -a -- exr exercism
 abbr -a -- fsc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/FSC checklist.pages"'
 abbr -a -- g git
 abbr -a -- gg lazygit
