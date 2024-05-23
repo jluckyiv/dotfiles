@@ -74,6 +74,7 @@ abbr -a -- exr exercism
 abbr -a -- fsc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/FSC checklist.pages"'
 abbr -a -- g git
 abbr -a -- gg lazygit
+abbr -a -- gl gleam
 abbr -a -- hint 'gh api "/repos/rstacruz/cheatsheets/git/trees/master?recursive=false" -q ".tree[].path" | rg ".md" | fzf --header "rstacruz/cheatsheets" --reverse --preview "curl -s https://raw.githubusercontent.com/rstacruz/cheatsheets/master/{1}" --preview-window=right,80% | xargs echo "https://raw.githubusercontent.com/rstacruz/cheatsheets/master/$1" | sed "s/ //g" | xargs glow --pager'
 abbr -a -- ll 'eza -l'
 abbr -a -- ls eza
