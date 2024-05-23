@@ -79,6 +79,7 @@ brew "sqlite"
 brew "starship"
 brew "sttr"
 brew "subversion"
+brew "tesseract"
 brew "thefuck"
 brew "tldr"
 brew "tmux"
@@ -132,6 +133,7 @@ cask "warp"
 cask "wezterm"
 cask "zed"
 cask "zoom"
+cask "zotero"
 
 mas "Amphetamine", id: 937984704
 mas "Cardhop", id: 1290358394
