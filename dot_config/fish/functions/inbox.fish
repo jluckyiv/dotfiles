@@ -1,4 +1,4 @@
-function add_ref --wraps='/bin/bash inbox' --description 'alias inbox=/bin/bash add_refno.sh'
-    /bin/bash inbox $argv
-
+function inbox --wraps='/bin/bash inbox.sh' --description 'alias inbox=/bin/bash inbox.sh'
+  /bin/bash inbox.sh $argv
+        
 end
