@@ -1,0 +1,4 @@
+#!/bin/bash
+date=$1
+
+fd --newer $1 -x mv '{}' ~/Inbox/ \;
