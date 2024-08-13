@@ -68,6 +68,7 @@ fish_add_path $HOME/.cargo/bin
 abbr -a -- amc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/AMC checklist.pages"'
 abbr -a -- arst asdf
 abbr -a -- bb 'brew bundle install --cleanup --file ~/Brewfile'
+abbr -a -- cc codecrafters
 abbr -a -- cd z
 abbr -a -- cea 'chezmoi edit --apply'
 abbr -a -- exr exercism
