@@ -22,8 +22,16 @@ current_date=$(date +%Y-%m-%d)
 dir=$(dirname "$filename")
 base=$(basename "$filename")
 
+# Check if the base name starts with a date (ISO-8601 format)
+if [[ "$base" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}-(.*)$ ]]; then
+	# Remove the existing date from the base name
+	new_base=${BASH_REMATCH[1]}
+else
+	new_base=$base
+fi
+
 # Create the new filename with the current date prepended
-new_filename="$dir/$current_date-$base"
+new_filename="$dir/$current_date-$new_base"
 
 # Copy the file to the new filename
 cp "$filename" "$new_filename"
