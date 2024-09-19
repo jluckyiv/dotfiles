@@ -8,6 +8,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
 tap "oven-sh/bun"
+tap "teamookla/speedtest"
 
 brew "ansible"
 brew "atuin"
