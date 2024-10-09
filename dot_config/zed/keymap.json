@@ -1,0 +1,39 @@
+[
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      "shift-h": "pane::ActivatePrevItem",
+      "shift-k": "editor::Hover",
+      "shift-l": "pane::ActivateNextItem",
+      "space a i": "assistant::InlineAssist",
+      "space b a": "pane::CloseAllItems",
+      "space b d": "pane::CloseActiveItem",
+      "space c a": "editor::ToggleCodeActions",
+      "space c d": "diagnostics::Deploy",
+      "space l f": "editor::Format",
+      "space l r": "editor::Rename",
+      "space e": "workspace::ToggleLeftDock",
+      "space f f": "file_finder::Toggle",
+      "space f s": "outline::Toggle",
+      "space space": "pane::AlternateFile",
+      "space v c": "zed::OpenSettings",
+      "space v k": "zed::OpenKeymap",
+      "space v l": "vim::OpenDefaultKeymap"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      "shift-k": "editor::MoveLineUp",
+      "shift-j": "editor::MoveLineDown"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {}
+  }
+]
