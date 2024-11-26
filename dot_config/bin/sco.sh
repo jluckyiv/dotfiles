@@ -26,8 +26,8 @@ fi
 
 max_number=0
 for file in *; do
-	if [[ $file =~ ^Scheduling[[:space:]]Order[[:space:]]No\.[[:space:]][0-9]{1,2}\.docx$ ]]; then
-		number=$(echo $file | grep -o -E '[0-9]+')
+	if [[ $file =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}[[:space:]]Scheduling[[:space:]]Order[[:space:]]No\.[[:space:]][0-9]{1,2}\.docx$ ]]; then
+		number=$(echo "$file" | grep -o -E '[0-9]+\.docx$' | grep -o -E '[0-9]+')
 		if ((number > max_number)); then
 			max_number=$number
 		fi
@@ -35,6 +35,7 @@ for file in *; do
 done
 
 new_number=$((max_number + 1))
-new_file="Scheduling Order No. $new_number.docx"
+current_date=$(date +%Y-%m-%d)
+new_file="$current_date Scheduling Order No. $new_number.docx"
 
 pandoc "$input_file" -o "$new_file"
