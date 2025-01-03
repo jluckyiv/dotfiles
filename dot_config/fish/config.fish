@@ -71,6 +71,7 @@ abbr -a -- bb 'brew bundle install --cleanup --file ~/Brewfile'
 abbr -a -- cc codecrafters
 abbr -a -- cd z
 abbr -a -- cea 'chezmoi edit --apply'
+abbr -a -- drb 'darwin-rebuild switch --flake ~/.config/nix-darwin'
 abbr -a -- exr exercism
 abbr -a -- fsc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/FSC checklist.pages"'
 abbr -a -- g git
@@ -95,6 +96,7 @@ abbr -a -- tr 'tldr --list | fzf --header "tldr (tealdeer)" --reverse --preview 
 abbr -a -- tree 'eza --tree'
 abbr -a -- vb 'chezmoi edit --apply ~/Brewfile'
 abbr -a -- vf 'chezmoi edit --apply ~/.config/fish/config.fish'
+abbr -a -- vg 'chezmoi edit --apply ~/.config/ghostty/config'
 abbr -a -- vj 'chezmoi edit --apply ~/.config/jago/config.yaml'
 abbr -a -- vkb 'chezmoi edit --apply ~/.config/karabiner/karabiner.json'
 abbr -a -- vkt 'chezmoi edit --apply ~/.config/kitty/kitty.conf'
@@ -118,3 +120,21 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 source ~/.asdf/asdf.fish
 source ~/.config/op/plugins.sh
 source ~/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
+
+# Nix
+set -x NIX_PATH nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixpkgs
+set -x PATH /nix/var/nix/profiles/default/bin $PATH
+
+# Nix environment variables
+set -x NIX_BUILD_SHELL /bin/sh
+set -x IN_NIX_SHELL ""
+set -x NIX_SSL_CERT_FILE "/etc/ssl/certs/ca-certificates.crt"
+set -x NIX_BUILD_SHELL /bin/sh
+set -x NIX_PROFILES "/nix/var/nix/profiles/default /run/current-system/sw /Users/jluckyiv/.nix-profile"
+set -x NIX_PATH "nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels"
+set -x WEZTERM_UNIX_SOCKET "/Users/jluckyiv/.local/share/wezterm/gui-sock-49460"
+set -x __NIX_DARWIN_SET_ENVIRONMENT_DONE 1
+set -x NIX_USER_PROFILE_DIR /nix/var/nix/profiles/per-user/jluckyiv
+set -x NIX_REMOTE daemon
+
+set -x PATH /run/current-system/sw/bin $PATH
