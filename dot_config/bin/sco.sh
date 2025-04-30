@@ -38,4 +38,4 @@ new_number=$((max_number + 1))
 current_date=$(date +%Y-%m-%d)
 new_file="$current_date Scheduling Order No. $new_number.docx"
 
-pandoc "$input_file" -o "$new_file"
+pandoc "$input_file" | pandoc -f html -o "$new_file"
