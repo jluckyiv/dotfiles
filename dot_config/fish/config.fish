@@ -11,7 +11,10 @@
 
 starship init fish | source # https://starship.rs/
 zoxide init fish | source # 'ajeetdsouza/zoxide'
+
+set -gx ATUIN_NOBIND true
 atuin init fish | source
+bind \cr _atuin_search
 
 set -gx CPPFLAGS -I/opt/homebrew/opt/sqlite/include
 set -gx LDFLAGS -L/opt/homebrew/opt/sqlite/lib
@@ -80,6 +83,7 @@ abbr -a -- gl gleam
 abbr -a -- hint 'gh api "/repos/rstacruz/cheatsheets/git/trees/master?recursive=false" -q ".tree[].path" | rg ".md" | fzf --header "rstacruz/cheatsheets" --reverse --preview "curl -s https://raw.githubusercontent.com/rstacruz/cheatsheets/master/{1}" --preview-window=right,80% | xargs echo "https://raw.githubusercontent.com/rstacruz/cheatsheets/master/$1" | sed "s/ //g" | xargs glow --pager'
 abbr -a -- ll 'eza -l'
 abbr -a -- ls eza
+abbr -a -- nfu 'nix flake update --flake ~/.config/nix-darwin'
 abbr -a -- pdfe 'open -a "PDF Expert"'
 abbr -a -- pp 'open -a "Microsoft PowerPoint"'
 abbr -a -- sc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/SC checklist.pages"'
@@ -99,7 +103,8 @@ abbr -a -- vf 'chezmoi edit --apply ~/.config/fish/config.fish'
 abbr -a -- vg 'chezmoi edit --apply ~/.config/ghostty/config'
 abbr -a -- vj 'chezmoi edit --apply ~/.config/jago/config.yaml'
 abbr -a -- vkb 'chezmoi edit --apply ~/.config/karabiner/karabiner.json'
-abbr -a -- vkt 'chezmoi edit --apply ~/.config/kitty/kitty.conf'
+abbr -a -- vnf 'chezmoi edit --apply ~/.config/nix-darwin/flake.nix'
+abbr -a -- vnh 'chezmoi edit --apply ~/.config/nix-darwin/home.nix'
 abbr -a -- vt 'chezmoi edit --apply ~/.config/tmux/tmux.conf'
 abbr -a -- vva 'chezmoi edit --apply ~/.config/nvim/lua/config/autocmds.lua'
 abbr -a -- vvc 'chezmoi edit --apply ~/.config/nvim/lua/config/'
@@ -110,6 +115,7 @@ abbr -a -- vvs 'chezmoi edit --apply ~/.config/nvim/lua/plugins/colorscheme.lua'
 abbr -a -- vw 'chezmoi edit --apply ~/.wezterm.lua'
 abbr -a -- word 'open -a "Microsoft Word"'
 abbr -a -- xl 'open -a "Microsoft Excel"'
+abbr -a -- xspouse 'wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Xspouse/CAX.exe'
 abbr -a -- zz 'z -'
 abbr -a --position anywhere -- !! '$history[1]'
 abbr -a --position anywhere -- rmmd 'README.md'
