@@ -44,7 +44,7 @@
       nixpkgs.hostPlatform = "aarch64-darwin";
 
       # Enable sudo Touch ID authentication.
-      security.pam.enableSudoTouchIdAuth = true;
+      security.pam.services.sudo_local.touchIdAuth = true;
 
       # Manage macOS system settings.
       system.defaults = {
@@ -64,17 +64,27 @@
       '';
 
       # Build any users that are not in the system
-      nix.configureBuildUsers = true;
-      nix.useDaemon = true;
+      nix.enable = true;
 
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
-      environment.systemPackages = [
+      environment.systemPackages = with pkgs; [
             pkgs._1password-cli
             pkgs.atuin
             pkgs.bat
             pkgs.btop
             pkgs.chezmoi
+            elmPackages.elm
+            elmPackages.elm-analyse
+            elmPackages.elm-doc-preview
+            elmPackages.elm-format
+            elmPackages.elm-json
+            elmPackages.elm-language-server
+            elmPackages.elm-live
+            elmPackages.elm-optimize-level-2
+            elmPackages.elm-review
+            elmPackages.elm-test
+            elmPackages.elm-test-rs
             pkgs.eza
             pkgs.fd
             pkgs.fish
@@ -92,9 +102,9 @@
             pkgs.lazygit
             pkgs.lua
             pkgs.luarocks
+            pkgs.imagemagick
             pkgs.neofetch
             pkgs.neovim
-            pkgs.nodejs
             pkgs.opam
             pkgs.pandoc
             pkgs.pdfgrep
@@ -108,11 +118,12 @@
             pkgs.sqlite
             pkgs.starship
             pkgs.sttr
-            pkgs.thefuck
+            pkgs.tectonic
             pkgs.tldr
             pkgs.tmux
             pkgs.tree-sitter
             pkgs.wget
+            pkgs.yq
             pkgs.zoxide
             pkgs.zstd
         ];
@@ -128,11 +139,15 @@
           onActivation.upgrade = true;
           onActivation.cleanup = "zap";
 
+          brews = [ 
+            "nodejs"
+            "thefuck"
+          ];
           casks = [
             "1password"
             "alfred"
-            "basictex"
             "cheatsheet"
+            "crossover"
             "customshortcuts"
             "devonthink"
             "docker"
@@ -141,6 +156,7 @@
             "fleet"
             "fluor"
             "ghostty"
+            "gitbutler"
             "github"
             "goland"
             "jetbrains-toolbox"
@@ -148,18 +164,26 @@
             "keyboard-maestro"
             "keyboardcleantool"
             "keycastr"
+            "mactex"
             "microsoft-edge"
             "moom"
             "morgen"
             "obsidian"
             "openinterminal"
+            "orion"
             "setapp"
             "tailscale"
             "textexpander"
             "vlc"
             "warp"
             "wezterm"
+            {
+              name = "wine-stable";
+              args = {no_quarantine = true;};
+            }
+            "xquartz"
             "zed"
+            "zen-browser"
             "zoom"
             "zotero"
           ];
@@ -172,6 +196,7 @@
             "Drafts" = 1435957248;
             "DuckDuckGo Privacy for Safari" = 1482920575;
             "Fantastical" = 975937182;
+            "Goodnotes 6" = 1444383602;
             "Keynote" = 409183694;
             "Kindle" = 302584613;
             "Microsoft Excel" = 462058435;
