@@ -8,9 +8,9 @@ pb-admin-base-url: {{ onepasswordRead "op://JAMS/jams-proxy/website" }}
 
 data-path: /Users/jluckyiv/_JAMS/
 
-ms-authority: https://login.microsoftonline.com/{{ onepasswordRead "op://Personal/JAMS Sync Azure/tenant id" }}
-ms-tenant-id: {{ onepasswordRead "op://Personal/JAMS Sync Azure/tenant id" }}
-ms-client-id: {{ onepasswordRead "op://Personal/JAMS Sync Azure/client id" }}
+ms-authority: https://login.microsoftonline.com/{{ onepasswordRead "op://JAMS/JAMS Sync Azure/tenant id" }}
+ms-tenant-id: {{ onepasswordRead "op://JAMS/JAMS Sync Azure/tenant id" }}
+ms-client-id: {{ onepasswordRead "op://JAMS/JAMS Sync Azure/client id" }}
 ms-scopes:
   - "openid"
   - "profile"
