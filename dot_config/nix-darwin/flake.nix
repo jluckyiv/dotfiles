@@ -90,7 +90,7 @@
             pkgs.fish
             pkgs.flyctl
             pkgs.fzf
-            pkgs.gh
+            # pkgs.gh
             pkgs.git
             pkgs.go
             pkgs.gofumpt
@@ -140,6 +140,7 @@
           onActivation.cleanup = "zap";
 
           brews = [ 
+            "gh"
             "nodejs"
             "thefuck"
           ];
