@@ -2,15 +2,15 @@
 jams-access-email: {{ onepasswordRead "op://JAMS/JAMSAccess/username" }}
 jams-access-password: {{ onepasswordRead "op://JAMS/JAMSAccess/password" }}
 jams-access-base-url: {{ onepasswordRead "op://JAMS/JAMSAccess/website" }}
-pb-admin-identity: {{ onepasswordRead "op://JAMS/jams-proxy/username" }}
-pb-admin-password: {{ onepasswordRead "op://JAMS/jams-proxy/password" }}
-pb-admin-base-url: {{ onepasswordRead "op://JAMS/jams-proxy/website" }}
+pb-admin-identity: {{ onepasswordRead "op://JAMS/jams-proxy superuser/username" }}
+pb-admin-password: {{ onepasswordRead "op://JAMS/jams-proxy superuser/password" }}
+pb-admin-base-url: {{ onepasswordRead "op://JAMS/jams-proxy superuser/website" }}
 
 data-path: /Users/jluckyiv/_JAMS/
 
-ms-authority: https://login.microsoftonline.com/{{ onepasswordRead "op://JAMS/JAMS Sync Azure/tenant id" }}
-ms-tenant-id: {{ onepasswordRead "op://JAMS/JAMS Sync Azure/tenant id" }}
-ms-client-id: {{ onepasswordRead "op://JAMS/JAMS Sync Azure/client id" }}
+ms-authority: https://login.microsoftonline.com/{{ onepasswordRead "op://JAMS/jams-proxy/tenant id" }}
+ms-tenant-id: {{ onepasswordRead "op://JAMS/jams-proxy/tenant id" }}
+ms-client-id: {{ onepasswordRead "op://JAMS/jams-proxy/client id" }}
 ms-scopes:
   - "openid"
   - "profile"

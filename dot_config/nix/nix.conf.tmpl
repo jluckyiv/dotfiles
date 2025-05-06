@@ -1,0 +1,6 @@
+# Nix configuration
+experimental-features = nix-command flakes
+
+# Access tokens for GitHub and GitLab
+access-tokens = github.com={{ onepasswordRead "op://JAMS/Github access token/credential" }} gitlab.com={{ onepasswordRead "op://JAMS/Gitlab access token/credential" }}
+
