@@ -22,7 +22,10 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, homebrew-core, homebrew-bundle, homebrew-cask, ... }:
   let
     configuration = { pkgs, config, ... }: {
+
       nixpkgs.config.allowUnfree = true;
+
+      system.primaryUser = "jluckyiv";
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
@@ -74,17 +77,6 @@
             pkgs.bat
             pkgs.btop
             pkgs.chezmoi
-            elmPackages.elm
-            elmPackages.elm-analyse
-            elmPackages.elm-doc-preview
-            elmPackages.elm-format
-            elmPackages.elm-json
-            elmPackages.elm-language-server
-            elmPackages.elm-live
-            elmPackages.elm-optimize-level-2
-            elmPackages.elm-review
-            elmPackages.elm-test
-            elmPackages.elm-test-rs
             pkgs.eza
             pkgs.fd
             pkgs.fish
@@ -143,11 +135,22 @@
             "gh"
             "nodejs"
             "thefuck"
+            "elm"
+            "elm-analyse"
+            "elm-doc-preview"
+            "elm-format"
+            "elm-json"
+            "elm-language-server"
+            "elm-live"
+            "elm-optimize-level-2"
+            "elm-review"
+            "elm-test"
           ];
           casks = [
             "1password"
             "alfred"
             "cheatsheet"
+            "claude"
             "crossover"
             "customshortcuts"
             "devonthink"
