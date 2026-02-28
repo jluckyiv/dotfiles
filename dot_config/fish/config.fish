@@ -74,7 +74,7 @@ abbr -a -- bb 'brew bundle install --cleanup --file ~/Brewfile'
 abbr -a -- cc codecrafters
 abbr -a -- cd z
 abbr -a -- cea 'chezmoi edit --apply'
-abbr -a -- drb 'darwin-rebuild switch --flake ~/.config/nix-darwin'
+abbr -a -- drb 'sudo darwin-rebuild switch --flake ~/.config/nix-darwin'
 abbr -a -- exr exercism
 abbr -a -- fsc 'open -a "Pages" "/Users/jluckyiv/Library/Mobile Documents/com~apple~Pages/Documents/FSC checklist.pages"'
 abbr -a -- g git
@@ -144,3 +144,4 @@ set -x NIX_USER_PROFILE_DIR /nix/var/nix/profiles/per-user/jluckyiv
 set -x NIX_REMOTE daemon
 
 set -x PATH /run/current-system/sw/bin $PATH
+direnv hook fish | source

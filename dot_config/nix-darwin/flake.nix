@@ -77,10 +77,11 @@
             pkgs.bat
             pkgs.btop
             pkgs.chezmoi
+            pkgs.direnv
             pkgs.eza
             pkgs.fd
             pkgs.fish
-            pkgs.flyctl
+            # pkgs.flyctl
             pkgs.fzf
             # pkgs.gh
             pkgs.git
@@ -95,16 +96,19 @@
             pkgs.lua
             pkgs.luarocks
             pkgs.imagemagick
+            pkgs.mask
             pkgs.neofetch
             pkgs.neovim
+            pkgs.ngrok
             pkgs.opam
+            pkgs.opencode
             pkgs.pandoc
             pkgs.pdfgrep
             pkgs.pkg-config
-            pkgs.poppler
             pkgs.qrtool
             pkgs.rename
             pkgs.ripgrep
+            pkgs.ripgrep-all
             pkgs.ruby
             pkgs.slides
             pkgs.sqlite
@@ -133,28 +137,22 @@
 
           brews = [ 
             "gh"
+            "flyctl"
             "nodejs"
+            "poppler"
             "thefuck"
-            "elm"
-            "elm-analyse"
-            "elm-doc-preview"
-            "elm-format"
-            "elm-json"
-            "elm-language-server"
-            "elm-live"
-            "elm-optimize-level-2"
-            "elm-review"
-            "elm-test"
           ];
           casks = [
             "1password"
             "alfred"
+            "brave-browser" 
             "cheatsheet"
             "claude"
+            "claude-code"
             "crossover"
             "customshortcuts"
             "devonthink"
-            "docker"
+            "docker-desktop"
             "dropbox"
             "firefox"
             "fleet"
@@ -163,6 +161,7 @@
             "gitbutler"
             "github"
             "goland"
+            "gstreamer-runtime"
             "jetbrains-toolbox"
             "karabiner-elements"
             "keyboard-maestro"
@@ -176,7 +175,7 @@
             "openinterminal"
             "orion"
             "setapp"
-            "tailscale"
+            "tailscale-app"
             "textexpander"
             "vlc"
             "warp"
@@ -187,7 +186,6 @@
             }
             "xquartz"
             "zed"
-            "zen-browser"
             "zoom"
             "zotero"
           ];
