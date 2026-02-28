@@ -1,0 +1,25 @@
+{
+  "extras": [
+    "ai.copilot",
+    "ai.copilot-chat",
+    "ai.claudecode",
+    "coding.mini-surround",
+    "formatting.prettier",
+    "lang.docker",
+    "lang.elm",
+    "lang.go",
+    "lang.json",
+    "lang.markdown",
+    "lang.toml",
+    "lang.typescript",
+    "lang.yaml",
+    "test.core",
+    "ui.treesitter-context",
+    "util.chezmoi",
+    "util.gitui"
+  ],
+  "news": {
+    "NEWS.md": ""
+  },
+  "version": 7
+}
