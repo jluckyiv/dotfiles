@@ -1,5 +1,5 @@
 {
-  description = "Example nix-darwin system flake";
+  description = "jluckyiv's nix-darwin system flake with home-manager";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -9,230 +9,186 @@
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-    homebrew-core.url = "github:homebrew/homebrew-core";
-    homebrew-core.flake = false;
-    homebrew-bundle.url = "github:homebrew/homebrew-bundle";
-    homebrew-bundle.flake = false;
-    homebrew-cask.url = "github:homebrew/homebrew-cask";
-    homebrew-cask.flake = false;
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, homebrew-core, homebrew-bundle, homebrew-cask, ... }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, ... }:
   let
-    configuration = { pkgs, config, ... }: {
+    username = "jluckyiv";
 
-      nixpkgs.config.allowUnfree = true;
+    darwinHosts = {
+      "Jacksons-M3-MacBook-Pro-14" = { system = "aarch64-darwin"; };
+      # "second-mac" = { system = "aarch64-darwin"; };
+    };
 
-      system.primaryUser = "jluckyiv";
+    mkDarwinConfig = hostname: { system }: nix-darwin.lib.darwinSystem {
+      inherit system;
+      modules = [
+        ({ pkgs, config, ... }: {
 
-      # Necessary for using flakes on this system.
-      nix.settings.experimental-features = "nix-command flakes";
+          nixpkgs.config.allowUnfree = true;
 
-      # Enable alternative shell support in nix-darwin.
-      programs.fish.enable = true;
-      # programs.zsh.enable = true;
-      
-      environment.shells = [pkgs.fish];
+          system.primaryUser = username;
 
-      # Set Git commit hash for darwin-version.
-      system.configurationRevision = self.rev or self.dirtyRev or null;
+          # Necessary for using flakes on this system.
+          nix.settings.experimental-features = "nix-command flakes";
 
-      # Used for backwards compatibility, please read the changelog before changing.
-      # $ darwin-rebuild changelog
-      system.stateVersion = 5;
+          # Enable alternative shell support in nix-darwin.
+          programs.fish.enable = true;
 
-      # The platform the configuration will be used on.
-      nixpkgs.hostPlatform = "aarch64-darwin";
+          environment.shells = [pkgs.fish];
 
-      # Enable sudo Touch ID authentication.
-      security.pam.services.sudo_local.touchIdAuth = true;
+          # Set Git commit hash for darwin-version.
+          system.configurationRevision = self.rev or self.dirtyRev or null;
 
-      # Manage macOS system settings.
-      system.defaults = {
-        dock.autohide = true;
-        NSGlobalDomain.AppleKeyboardUIMode = 3;
-        finder.FXPreferredViewStyle = "Nlsv";
-        loginwindow.GuestEnabled = false;
-      };
-      # Let Nix know where the user's home directory is.
-      users.knownUsers = [ "jluckyiv" ];
-      users.users.jluckyiv.uid = 501;
-      users.users.jluckyiv.name = "jluckyiv";
-      users.users.jluckyiv.home = "/Users/jluckyiv";
-      users.users.jluckyiv.shell = pkgs.fish;
-      system.activationScripts.setFishAsShell.text = ''
-        dscl . -create /Users/jluckyiv UserShell /run/current-system/sw/bin/fish
-      '';
+          # Used for backwards compatibility, please read the changelog before changing.
+          # $ darwin-rebuild changelog
+          system.stateVersion = 5;
 
-      # Build any users that are not in the system
-      nix.enable = true;
+          # Enable sudo Touch ID authentication.
+          security.pam.services.sudo_local.touchIdAuth = true;
 
-      # List packages installed in system profile. To search by name, run:
-      # $ nix-env -qaP | grep wget
-      environment.systemPackages = with pkgs; [
-            pkgs._1password-cli
-            pkgs.atuin
-            pkgs.bat
-            pkgs.btop
-            pkgs.chezmoi
-            pkgs.direnv
-            pkgs.eza
-            pkgs.fd
-            pkgs.fish
-            # pkgs.flyctl
-            pkgs.fzf
-            # pkgs.gh
-            pkgs.git
-            pkgs.go
-            pkgs.gofumpt
-            pkgs.golangci-lint
-            pkgs.gotestsum
-            pkgs.go-task
-            pkgs.hugo
-            pkgs.jq
-            pkgs.lazygit
-            pkgs.lua
-            pkgs.luarocks
-            pkgs.imagemagick
-            pkgs.mask
-            pkgs.neofetch
-            pkgs.neovim
-            pkgs.ngrok
-            pkgs.opam
-            pkgs.opencode
-            pkgs.pandoc
-            pkgs.pdfgrep
-            pkgs.pkg-config
-            pkgs.qrtool
-            pkgs.rename
-            pkgs.ripgrep
-            pkgs.ripgrep-all
-            pkgs.ruby
-            pkgs.slides
-            pkgs.sqlite
-            pkgs.starship
-            pkgs.sttr
-            pkgs.tectonic
-            pkgs.tldr
-            pkgs.tmux
-            pkgs.tree-sitter
-            pkgs.wget
-            pkgs.yq
-            pkgs.zoxide
-            pkgs.zstd
-        ];
-
-      # Use Nix to install fonts.
-      fonts.packages = with pkgs; [
-        nerd-fonts.jetbrains-mono
-      ];
-
-      homebrew = {
-          enable = true;
-          onActivation.autoUpdate = true;
-          onActivation.upgrade = true;
-          onActivation.cleanup = "zap";
-
-          brews = [ 
-            "gh"
-            "flyctl"
-            "nodejs"
-            "poppler"
-            "thefuck"
-          ];
-          casks = [
-            "1password"
-            "alfred"
-            "brave-browser" 
-            "cheatsheet"
-            "claude"
-            "claude-code"
-            "crossover"
-            "customshortcuts"
-            "devonthink"
-            "docker-desktop"
-            "dropbox"
-            "firefox"
-            "fleet"
-            "fluor"
-            "ghostty"
-            "gitbutler"
-            "github"
-            "goland"
-            "gstreamer-runtime"
-            "jetbrains-toolbox"
-            "karabiner-elements"
-            "keyboard-maestro"
-            "keyboardcleantool"
-            "keycastr"
-            "mactex"
-            "microsoft-edge"
-            "moom"
-            "morgen"
-            "obsidian"
-            "openinterminal"
-            "orion"
-            "setapp"
-            "tailscale-app"
-            "textexpander"
-            "vlc"
-            "warp"
-            "wezterm"
-            {
-              name = "wine-stable";
-              args = {no_quarantine = true;};
-            }
-            "xquartz"
-            "zed"
-            "zoom"
-            "zotero"
-          ];
-
-          masApps = {
-            "Amphetamine" = 937984704;
-            "Cardhop" = 1290358394;
-            "Day One" = 1055511498;
-            "Dice" = 1479250666;
-            "Drafts" = 1435957248;
-            "DuckDuckGo Privacy for Safari" = 1482920575;
-            "Fantastical" = 975937182;
-            "Goodnotes 6" = 1444383602;
-            "Keynote" = 409183694;
-            "Kindle" = 302584613;
-            "Microsoft Excel" = 462058435;
-            "Microsoft PowerPoint" = 462062816;
-            "Microsoft Word" = 462054704;
-            "Numbers" = 409203825;
-            "OneDrive" = 823766827;
-            "Pages" = 409201541;
-            "Paprika Recipe Manager 3" = 1303222628;
-            "Parcel" = 639968404;
-            "Patterns" = 429449079;
-            "Reeder" = 1529448980;
-            "Save to Reader" = 1640236961;
-            "Super Agent" = 1568262835;
-            "URL Linker" = 1289119450;
-            "uBlacklist for Safari" = 1547912640;
+          # Manage macOS system settings.
+          system.defaults = {
+            dock.autohide = true;
+            NSGlobalDomain.AppleKeyboardUIMode = 3;
+            finder.FXPreferredViewStyle = "Nlsv";
+            loginwindow.GuestEnabled = false;
           };
-        };
 
+          users.knownUsers = [ username ];
+          users.users.${username} = {
+            uid = 501;
+            name = username;
+            home = "/Users/${username}";
+            shell = pkgs.fish;
+          };
+          system.activationScripts.setFishAsShell.text = ''
+            dscl . -create /Users/${username} UserShell /run/current-system/sw/bin/fish
+          '';
+
+          nix.enable = true;
+
+          # Minimal system packages — just enough for bootstrap.
+          # Dev tools live in home.nix via home-manager.
+          environment.systemPackages = with pkgs; [
+            _1password-cli
+            direnv
+            fish
+            git
+          ];
+
+          # Use Nix to install fonts.
+          fonts.packages = with pkgs; [
+            nerd-fonts.jetbrains-mono
+          ];
+
+          homebrew = {
+            enable = true;
+            onActivation.autoUpdate = true;
+            onActivation.upgrade = true;
+            onActivation.cleanup = "zap";
+
+            brews = [
+              "gh"
+              "flyctl"
+              "nodejs"
+              "poppler"
+              "thefuck"
+            ];
+            casks = [
+              "1password"
+              "alfred"
+              "brave-browser"
+              "cheatsheet"
+              "claude"
+              "claude-code"
+              "crossover"
+              "customshortcuts"
+              "devonthink"
+              "docker-desktop"
+              "dropbox"
+              "firefox"
+              "fleet"
+              "fluor"
+              "ghostty"
+              "gitbutler"
+              "github"
+              "goland"
+              "gstreamer-runtime"
+              "jetbrains-toolbox"
+              "karabiner-elements"
+              "keyboard-maestro"
+              "keyboardcleantool"
+              "keycastr"
+              "mactex"
+              "microsoft-edge"
+              "moom"
+              "morgen"
+              "obsidian"
+              "openinterminal"
+              "orion"
+              "setapp"
+              "tailscale-app"
+              "textexpander"
+              "vlc"
+              "warp"
+              "wezterm"
+              {
+                name = "wine-stable";
+                args = {no_quarantine = true;};
+              }
+              "xquartz"
+              "zed"
+              "zoom"
+              "zotero"
+            ];
+
+            masApps = {
+              "Amphetamine" = 937984704;
+              "Cardhop" = 1290358394;
+              "Day One" = 1055511498;
+              "Dice" = 1479250666;
+              "Drafts" = 1435957248;
+              "DuckDuckGo Privacy for Safari" = 1482920575;
+              "Fantastical" = 975937182;
+              "Goodnotes 6" = 1444383602;
+              "Keynote" = 409183694;
+              "Kindle" = 302584613;
+              "Microsoft Excel" = 462058435;
+              "Microsoft PowerPoint" = 462062816;
+              "Microsoft Word" = 462054704;
+              "Numbers" = 409203825;
+              "OneDrive" = 823766827;
+              "Pages" = 409201541;
+              "Paprika Recipe Manager 3" = 1303222628;
+              "Parcel" = 639968404;
+              "Patterns" = 429449079;
+              "Reeder" = 1529448980;
+              "Save to Reader" = 1640236961;
+              "Super Agent" = 1568262835;
+              "URL Linker" = 1289119450;
+              "uBlacklist for Safari" = 1547912640;
+            };
+          };
+
+        })
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "hm-backup";
+          home-manager.users.${username} = import ./home.nix;
+        }
+      ];
     };
   in
   {
-    # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#Jacksons-M3-MacBook-Pro-14
-    darwinConfigurations."Jacksons-M3-MacBook-Pro-14" = nix-darwin.lib.darwinSystem {
-      modules = [ 
-      configuration 
-      home-manager.darwinModules.home-manager
-      {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.users.jluckyiv = import ./home.nix;
-      }
-      ];
-    };
+    darwinConfigurations = builtins.mapAttrs mkDarwinConfig darwinHosts;
+
+    # Future: standalone home-manager for Linux remotes
+    # homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
+    #   pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    #   modules = [ ./home.nix ];
+    # };
   };
 }
