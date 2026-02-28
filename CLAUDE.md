@@ -25,12 +25,17 @@ This copies the target into the source dir with chezmoi naming conventions (e.g.
 - `.tmpl` suffix → Go template (uses `chezmoi data` for variables)
 - `run_once_` / `run_onchange_` → scripts that run on apply
 
+## Goals
+
+- **Multi-machine portability**: config should make it easy to set up a new Apple Silicon Mac from scratch. Potential future Linux remote via standalone home-manager.
+- Username is always `jluckyiv`. Only target platforms: aarch64-darwin and potentially x86_64-linux.
+
 ## Tools
 
-- Package manager: nix-darwin (`dot_config/nix-darwin/flake.nix`)
-- Homebrew for GUI apps and casks (`Brewfile`)
+- Package manager: nix-darwin (`dot_config/nix-darwin/flake.nix`) + home-manager (`home.nix`)
+- Homebrew for GUI apps, casks, and Mac App Store apps (managed via nix-homebrew in flake.nix)
 - Shell: fish
-- User is on macOS (Darwin)
+- User is on macOS (Darwin), Apple Silicon only
 
 ## Nix-darwin troubleshooting
 
