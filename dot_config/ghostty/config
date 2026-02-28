@@ -1,5 +1,9 @@
-background-opacity = 0.9
+background-opacity = 1.0
 font-family = "JetBrains Mono"
 font-size = 16
-theme = catppuccin-frappe
+theme = Catppuccin Frappe
 
+# Necessary to open current command in EDITOR with Fish
+# Would prefer a keybind to ctrl+alt+e, but can't figure it out.
+macos-option-as-alt = left
+keybind = shift+enter=text:\n
